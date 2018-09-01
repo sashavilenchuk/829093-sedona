@@ -1,0 +1,242 @@
+body {
+margin: 0;
+padding: 0;
+
+font-family: "PT Sans", Arial, sans-serif;
+font-size: 14px;
+line-height: 26px;
+color: #000000;
+text-transform: uppercase;
+
+ background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 26px;
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.site-navigation {
+	list-style: none;
+}
+
+.site-navigation a {
+  color: #000000;
+}
+
+.site-navigation a:hover {
+	color: #81b3d2;
+}
+
+.site-navigation a:focus {
+	color: #e4e4e4;
+}
+
+.reasons-list,
+.reasons-list block1
+.reasons-list block2 {
+	  list-style: none;
+}
+
+/* не пропадает разметка листа у block2
+*/
+
+.container h1 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;
+	text-align: center;
+}
+
+/*что делать с классом visually hidden?*/
+
+.reasons-text {
+	text-align: center;
+}
+
+
+.block1 li:first-child, 
+li:nth-child(5) {
+	background-color: #81b3d2;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 21px;	
+}
+
+.blcok1 li:first-child p, 
+li:nth-child(5) p {
+	background-color: #81b3d2;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 21px;	
+}
+
+.block1 li:first-child span, 
+.block1 li:nth-child(5) span {
+	background-color: #81b3d2;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 21px;	
+}
+
+.block1 li:nth-child(2), 
+.block1 li:nth-child(3),
+.block1 li:nth-child(4)  {
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 21px;	
+}
+
+.block1 li:nth-child(2) p, 
+.block1 li:nth-child(3) p,
+.block1 li:nth-child(4) p {
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 14px;
+	line-height: 21px;	
+	font-weight: normal;
+}
+
+
+.block2 {
+	background-color: #eeeeee
+}
+
+
+.block2 h3 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 21px;	
+}
+
+
+.interest-h1 {
+	font-size: 30px;
+	text-align: center;
+	line-height: 36px;
+}
+
+.interest-text {
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+}
+
+.form h3 {
+	font-size: 21px;
+	line-height: 26px;
+	color: #ffffff;
+	
+}
+
+.form h3:hover: {
+	background-color: #604e43;
+}
+
+.form h3:focus {
+	background-color: #503e33;
+	color: #928a85;
+}
+
+/*поиск гостинице в седоне - разворчаивает модальное окно?
+*/
+
+.user p {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+}
+
+
+/*почему класс не применяется к форме?
+как применить фон  к окну формы, а не ко всей форме? + border
+здесь же доделать hover и foucs
+
+
+.form-field {
+	border: 10px solid #000000;
+
+}
+
+*/
+
+
+button {
+	background-color: #81b3d2;
+	color: #ffffff;
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+}
+
+button:hover {
+	background-color: #669ec0;
+}
+
+button:focus {
+	background-color: #5496bd;
+	color: #94b9d2;
+}
+
+
+.user input[type="date"],
+.user input[type="number"]
+ {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+}
+
+/* нужно ли задавать карту как фоновое изображение на этом этапе? если да, то форум и футер обернуть в общий контейнер?
+*/
+
+.main-footer {
+	background-color: rgba(255, 255, 255, 0,9);
+}
+
+.footer-text {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  color: #81b3d2;
+}
+
+/* задавать ли иконки для social-button?
+*/
+
+
+.footer-copyright {
+  text-align: center;
+}
+
+.footer-copyright .button:hover {
+	color: #81b3d2;
+}
+.footer-copyright .button:focus {
+	color: #bdbbbc;
+}

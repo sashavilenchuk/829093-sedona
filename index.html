@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>City of Sedona</title>
-</head>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
+  </head>
 <body>
   <header class="main-header">
     <nav class="main-navigation">
@@ -24,8 +27,8 @@
     <section class="reasons">
       <h2 class="visually-hidden">Причины</h2>
       <p class="reasons-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-      <ul class="reasons-list">
-        <li class="reason-item">
+            <ul class="reasons-list block1">
+             <li class="reason-item">
           <h3>Настоящий городок</h3>
           <span>- №1 -</span>
           <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
@@ -49,6 +52,11 @@
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           <img src="img/layer-5.jpg" width="800" height="260" alt="Мост дьявола">
         </li>
+      </ul>
+
+      <div class="reasons-list block2">
+
+      <ul>
         <li class="reason-item">
           <h3>Небольшая площадь</h3>
           <span>- №3 -</span>
@@ -63,9 +71,10 @@
           <h3>Мало туристов</h3>
           <span>- №5 - </span>
           <p>Большинство едет в Гранд Каньон и толпится там</p>
-        </li>           
-      </ul>
-    </section>
+        </li>   
+      </ul>    
+    </div>
+          </section>
     <section class="interest">
       <h2 class="interest-h1">Заинтересовались?</h2>
       <p class="interest-text">Укажите предполагаемые даты поездки,  и мы покажем вам лучшие предложения гостиниц в Седоне</p>
@@ -75,21 +84,21 @@
       <h3>Поиск гостиниц в Седоне</h3>
       <form class="user" method="get"
           action="https://echo.htmlacademy.ru">
-        <p>
+        <p class="form-field">
         <label for="date-arrival">Дата заезда</label>
         <input id="date-arrival" type="date"
                name="date-arrival">
       </p>
-      <p>
+      <p class="form-field">
         <label for="date-depature">Дата выезда</label>
         <input id="date-depature" type="date"
                name="date-depature">
       </p>
-       <p>
+       <p class="form-field">
         <label for="amount-adults">Взрослые</label>
         <input id="amount-adults" type="number" min="0" value="2"
                name="amount-adults">
-      </p>
+      </p class="form-field">
        <p>
         <label for="amount-children">Дети</label>
         <input id="amount-children" type="number" min="0"
@@ -115,3 +124,5 @@
   </footer>
 </body>
 </html>
+
+

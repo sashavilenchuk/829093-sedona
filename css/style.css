@@ -8,7 +8,7 @@ line-height: 26px;
 color: #000000;
 text-transform: uppercase;
 
- background-color: #ffffff;
+ background-color: #f2f2f2;
 }
 
 a {
@@ -39,14 +39,9 @@ a {
 	color: #e4e4e4;
 }
 
-.reasons-list,
-.reasons-list block1
-.reasons-list block2 {
-	  list-style: none;
+.reasons-list {
+  list-style: none;
 }
-
-/* не пропадает разметка листа у block2
-*/
 
 .container h1 {
 	color: #000000;
@@ -56,76 +51,74 @@ a {
 	text-align: center;
 }
 
-/*что делать с классом visually hidden?*/
+.visually-hidden {
+	position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden
+}
 
 .reasons-text {
 	text-align: center;
 }
 
-
-.block1 li:first-child, 
-li:nth-child(5) {
-	background-color: #81b3d2;
-	color: #ffffff;
-	font-weight: bold;
-	font-size: 21px;
-	line-height: 21px;	
-}
-
-.blcok1 li:first-child p, 
-li:nth-child(5) p {
+.reason-item-blue {
 	background-color: #81b3d2;
 	color: #ffffff;
 	font-size: 14px;
 	line-height: 21px;	
+	text-align: center;
 }
 
-.block1 li:first-child span, 
-.block1 li:nth-child(5) span {
-	background-color: #81b3d2;
-	color: #ffffff;
-	font-size: 14px;
-	line-height: 21px;	
-}
-
-.block1 li:nth-child(2), 
-.block1 li:nth-child(3),
-.block1 li:nth-child(4)  {
-	background-color: #ffffff;
-	color: #000000;
-	font-weight: bold;
+.reason-item-blue h3 {
 	font-size: 21px;
-	line-height: 21px;	
+	line-height: 21px;
+	font-weight: bold;
 }
 
-.block1 li:nth-child(2) p, 
-.block1 li:nth-child(3) p,
-.block1 li:nth-child(4) p {
+.reason-item-white {
 	background-color: #ffffff;
 	color: #000000;
 	font-size: 14px;
 	line-height: 21px;	
-	font-weight: normal;
+	text-align: center;
 }
 
-
-.block2 {
-	background-color: #eeeeee
-}
-
-
-.block2 h3 {
-	color: #000000;
-	font-weight: bold;
+.reason-item-white h3 {
 	font-size: 21px;
-	line-height: 21px;	
+	line-height: 21px;
+	font-weight: bold;
 }
 
+.reason-item-grey {
+	background-color: #f2f2f2;
+	color: #000000;
+	font-size: 14px;
+	line-height: 21px;	
+	text-align: center;
+}
 
+.reason-item-grey h3 {
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: bold;
+}
+
+.interest {
+	background-color: #ffffff;
+}
 .interest-h1 {
 	font-size: 30px;
 	text-align: center;
 	line-height: 36px;
+	font-weight: bold;
 }
 
 .interest-text {
@@ -134,44 +127,58 @@ li:nth-child(5) p {
 	text-align: center;
 }
 
-.form h3 {
+.button-search {
 	font-size: 21px;
 	line-height: 26px;
 	color: #ffffff;
-	
+	text-transform: uppercase;
+	background-color: #766357;
 }
 
-.form h3:hover: {
+.button-search:hover {
 	background-color: #604e43;
 }
 
-.form h3:focus {
+.button-search:focus {
 	background-color: #503e33;
 	color: #928a85;
 }
 
-/*поиск гостинице в седоне - разворчаивает модальное окно?
-*/
-
-.user p {
+.form {
+	background-color: #ffffff;
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
 }
 
-
-/*почему класс не применяется к форме?
-как применить фон  к окну формы, а не ко всей форме? + border
-здесь же доделать hover и foucs
-
-
-.form-field {
-	border: 10px solid #000000;
-
+.date-arrival,
+.amount-adults,
+.amount-children,
+.date-depature {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	background-color: #f2f2f2;
+	border: none;
 }
 
-*/
+.date-arrival:hover,
+.amount-adults:hover,
+.amount-children:hover,
+.date-depature:hover {
+	background-color: #ebebeb;
+}
 
+.date-arrival:focus,
+.amount-adults:focus,
+.amount-children:focus,
+.date-depature:focus {
+	background-color: #ffffff;
+	border-color: #ebebeb;
+	border: 2px #ebebeb;
+
+}
+/*не получилось поменять цвет рамки при focus */
 
 button {
 	background-color: #81b3d2;
@@ -180,6 +187,7 @@ button {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
+	border: 0;
 }
 
 button:hover {
@@ -191,20 +199,8 @@ button:focus {
 	color: #94b9d2;
 }
 
-
-.user input[type="date"],
-.user input[type="number"]
- {
-	font-size: 14px;
-	line-height: 26px;
-	font-weight: bold;
-}
-
-/* нужно ли задавать карту как фоновое изображение на этом этапе? если да, то форум и футер обернуть в общий контейнер?
-*/
-
 .main-footer {
-	background-color: rgba(255, 255, 255, 0,9);
+	background-color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-text {
@@ -220,15 +216,13 @@ button:focus {
 
 .footer-social ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .social-button {
   color: #81b3d2;
 }
-
-/* задавать ли иконки для social-button?
-*/
-
 
 .footer-copyright {
   text-align: center;
@@ -240,3 +234,128 @@ button:focus {
 .footer-copyright .button:focus {
 	color: #bdbbbc;
 }
+
+
+/*начало catalog*/
+
+
+.sorting-list {
+	list-style: none;
+}
+
+.sorting-top {
+	background-color: #ffffff;
+}
+
+.amount-result {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+}
+
+.sorting {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.sorting-list {
+	font-size: 12px;
+	line-height: 18px;
+	color: #f0f0f0;
+	}
+
+.sorting-list:hover {
+	color:#81b3d2;
+}
+
+.sorting-list:focus {
+	color: #ffffff;
+}
+
+.sorting-list:active {
+	color:#81b3d2;
+}
+
+
+.sorting-list li {
+	border-bottom: 2px dotted #81b3d2;	
+}
+
+/*не увеерена, как правильно сделать, чтобы подчеркивание было только под словом, не на все свободное пространство*/
+
+.hotels {
+	background-color: #ffffff;
+}
+
+
+.hotels-list {
+	list-style: none;
+}
+
+.hotels-list {
+	font-size: 14px
+	line-height: 21px;
+}
+
+.hotels-list h3 {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+}
+
+.hotels-list h3:hover {
+	color: #81b3d2;
+}
+
+.hotels-list h3:focus {
+	color: #cacaca;
+}
+
+.hotels-list-item-parametr {
+	list-style: none;
+}
+
+.hotels-list-item-parametr b{
+	font-weight: normal;
+}
+
+.hotels-list-item-rating {
+	background-color: #f2f2f2;
+}
+
+.button-more-info {
+	background-color: #81b3d2;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: bold;
+}
+
+.button-more-info:hover {
+	background-color: #669ec0;
+}
+
+.button-more-info:focus {
+	background-color: #5496bd;
+	color: #94b9d2;
+}
+
+.button-booking {
+	background-color: #766357;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: bold;
+}
+
+.button-booking:hover {
+	background-color: #604e43;
+}
+
+.button-booking:focus {
+	background-color: #503e33;
+	color: #928a85;
+}
+
+/*фотография+маска - как фон, текст как контентное изображение. перевырезать с белой маской.
+*/

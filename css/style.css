@@ -405,9 +405,7 @@ button:focus {
  	transform: 50%;
  }
  	
- 
-
- 
+  
 .background-image {
 	width: 100%;
 	margin-bottom: 60px;
@@ -428,8 +426,8 @@ button:focus {
 	padding: 0px;
 	margin: 0px;
 	display: flex;
-	flex-wrap: wrap;
-}
+	flex-wrap: nowrap;
+	}
 
 .reason-item-blue-1 {
 	display: flex;
@@ -466,8 +464,8 @@ button:focus {
 	width: 400px; 
 	height: 330px;
 	flex-direction: column;
-	outline: solid 3px blue; 
 }
+
 
 
 .reason-item-blue-2 {

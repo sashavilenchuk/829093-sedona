@@ -6,34 +6,51 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
-  </head>
+</head>
 <body>
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-navigation-logo">
         <img src="img/logo.png" width="140" height="71" alt="Логотип City of Sedona">
       </a>        
-      <ul class="site-navigation">
+      <ul class="site-navigation-1">
         <li><a href="info.html">Информация</a></li>
         <li><a href="gallery.html">Фото и видео</a></li>
+      </ul>
+      <ul class="site-navigation-2">
         <li><a href="state-map.html">Карта Штата</a></li>
         <li><a href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
   <main class="container">
-    <img src="img/background-photo.jpg" width="1200" height="514" alt="Sedona">
+    <div class= "background-image"><img src="img/background-photo.jpg" width="1200" height="514" alt="Sedona">
+    </div>
     <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
     <section class="reasons">
       <h2 class="visually-hidden">Причины поехать в Седону</h2>
       <p class="reasons-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+            
+
+
             <ul class="reasons-list">
-             <li class="reason-item-blue">
-          <h3>Настоящий городок</h3>
-          <span>- №1 -</span>
-          <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-          <img src="img/layer-10.jpg" width="800" height="260" alt="Настоящий городок">
-        </li>
+             
+
+
+             <li class="reason-item-blue-1">
+              <div class="reason-item-blue-1-text">
+              <h3>Настоящий городок</h3>
+              <span>- №1 -</span>
+              <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
+            <div class="reason-item-blue-2-img">
+              <img src="img/layer-10.jpg" width="800" height="260" alt="Настоящий городок">
+            </div>
+            </li>
+
+
+
+        
         <li class="reason-item-white">
           <h3>Жилье</h3>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -46,12 +63,22 @@
           <h3>Сувениры</h3>
           <p>Не только китайского, но и местного производства!</p>
         </li>
-        <li class="reason-item-blue">
+        
+
+
+        <li class="reason-item-blue-2">
+          <div class="reason-item-blue-2-text">
           <h3>Там есть мост дьявола</h3>
           <span>- №2 - </span>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        </div>
+        <div class="reason-item-blue-2-img">
           <img src="img/layer-5.jpg" width="800" height="260" alt="Мост дьявола">
+        </div>
         </li>
+
+
+
         <li class="reason-item-grey">
           <h3>Небольшая площадь</h3>
           <span>- №3 -</span>
@@ -69,14 +96,21 @@
         </li>   
       </ul>    
      </section>
+
+
+
+
     <section class="interest">
       <h2 class="interest-h1">Заинтересовались?</h2>
       <p class="interest-text">Укажите предполагаемые даты поездки,  и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <img src="img/map.jpg" width="1200" height="474" alt="Карта">
+      <!-- <img src="img/map.jpg" width="1200" height="474" alt="Карта"> -->
     </section>
+
+
     <section class="form">
       <button class="button-search" type="submit">Поиск гостиницы в Седоне</button>
 
+      <div class="form-fields">
       <form class="user" method="get"
           action="https://echo.htmlacademy.ru">
         <p class="form-field">
@@ -100,9 +134,12 @@
                name="amount-children">
       </p>      
       <button type="submit">Найти</button>
-    </form>   
+    </form>  
+    </div> 
     </section>
   </main>
+
+  
   <footer class="main-footer">
     <p class="footer-text">#VISITSEDONA</p>
     <div class="footer-social">

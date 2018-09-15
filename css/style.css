@@ -41,6 +41,8 @@ a {
 
 .reasons-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container h1 {
@@ -70,8 +72,7 @@ a {
 }
 
 
-.reason-item-blue-1-text,
-.reason-item-blue-2-text {
+.reason-item-blue {
 	background-color: #81b3d2;
 	color: #ffffff;
 	font-size: 14px;
@@ -79,8 +80,8 @@ a {
 	text-align: center;
 }
 
-.reason-item-blue-1-text h3,
-.reason-item-blue-2-text h3 {
+
+.reason-item-blue-text h3 {
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: bold;
@@ -372,6 +373,7 @@ button:focus {
 	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
+	outline: solid 3px brown;
  }
 	
 
@@ -381,17 +383,21 @@ button:focus {
 	display: flex;
 	height: 73px;
 	outline: solid 3px green;
-	/*flex-grow: 1;*/
-	flex-direction: column;
+}
+
+.site-navigation {
+	display: flex;
+	padding: 0px;
+	margin: 0px;
 }
 
 .site-navigation li {
-	display: flex;	
-	width: 400px
-	padding: 0px;
+	display: flex;
 	margin: 0px;
 	list-style: none;
 	outline: solid 3px red;
+	width: 240px;
+	align-items: center;
 }
 
 
@@ -408,35 +414,43 @@ button:focus {
   
 .background-image {
 	width: 100%;
-	margin-bottom: 60px;
 }
 
 
+.center-text {
+	display: block;
+	height: 220px;
+	outline: solid 3px red;
+	padding: 0px;
+	/*margin-top: 60px;*/
+	margin-bottom: 40px;
+}
 
-
-
-/*нужно ли для текста "СЕДОНА — НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!
-ПРИЧИНЫ ПОЕХАТЬ В СЕДОНУ
-РАССМОТРИМ 5 ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!" отдельная часть сетки?
-
-*/*/
 
 
 .reasons-list {
 	padding: 0px;
 	margin: 0px;
 	display: flex;
-	flex-wrap: nowrap;
-	}
+	flex-wrap: wrap;
+	list-style: none;
+}
 
-.reason-item-blue-1 {
+.reason-item-blue {
 	display: flex;
 	height: 260px;
 	outline: solid 3px green;
+	list-style: none;
+	margin: 0px;
+}
+
+.reason-item-blue.second {
+	display: flex;
+	flex-direction: row-reverse;
 }
 
 
-.reason-item-blue-1-text {
+.reason-item-blue-text {
 	display: flex;
 	width: 400px;
 	height: 260px;
@@ -446,15 +460,13 @@ button:focus {
 }
 
 
-.reason-item-blue-1-img {
+.reason-item-blue-img {
 	display: flex;
 	width: 800px
 	height: 260px;
 	outline: solid 3px red; 
 	flex-wrap: nowrap;
 }
-
-
 
 
 .reason-item-white {
@@ -465,38 +477,6 @@ button:focus {
 	height: 330px;
 	flex-direction: column;
 }
-
-
-
-.reason-item-blue-2 {
-	display: flex;
-	width: 1200px;
-	height: 260px;
-	outline: solid 3px green;
-}
-
-
-.reason-item-blue-2-text {
-	display: flex;
-	width: 400px;
-	height: 260px;
-	outline: solid 3px yellow;
-	flex-direction: column;
-}
-
-
-
-.reason-item-blue-2-img {
-	display: flex;
-	width: 800px
-	height: 260px;
-	outline: solid 3px red; 
-	flex-wrap: nowrap;
-	order: -1;
-}
-
-/*убрать item-blue-1-2, сделать модификатор для порядка расположения блоков во втором*/
-
 
 
 .reason-item-grey {
@@ -515,6 +495,7 @@ button:focus {
 	width: 1200px;
 	height: 290px;
 	outline: solid 3px red;
+	padding: 0px;
 }
 
 .form {
@@ -547,10 +528,8 @@ button:focus {
 
 .footer-text {
 
-	/*margin-left: 132px;*/
 	margin-top: 50px;
 	width: 400px;
-	/*margin-right: 255px;*/
 	outline: solid 3px yellow;
 }
 
@@ -564,9 +543,80 @@ button:focus {
 .footer-copyright {
 	width: 400px;
 	margin-top: 50px;
-	/*margin-right: 100px; */
-	/*почему не срабатывает правый маржин?*/
 	outline: solid 3px blue;
 }
 
-/*блоки в футеры одинаковой ширины и выровнять их по центру*/
+
+/*сетка каталога*/
+
+
+.sorting-top {
+	height: 100px;
+	outline: solid 3px red;
+}
+
+.sorting-list {
+	display: flex;
+	padding: 0px;
+	margin: 0px;
+}
+
+.sorting-list li {
+	display: flex;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.hotels-list {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.hotels-list-item {
+	display: flex;
+	width: 1056px;
+	height: 152px;
+	outline: solid 3px green;
+	padding: 0px;
+	margin-left: 73px;
+	justify-content: space-between;
+	}
+
+.hotels-list-image {
+	display: flex;
+	outline: solid 3px yellow;
+	width: 140px;
+	height: 152px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.hotels-list-item-data {
+	display: flex;
+	outline: solid 3px pink;
+	flex-grow: 1;
+	height: 152px;
+	
+}
+
+.hotels-list-item-rating {
+	display: flex;
+	outline: solid 3px brown;
+	width: 112px;
+	height: 152px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.hotels-list-item-parametr {
+	list-style: none;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+}
+
+
+
+
+

@@ -410,20 +410,26 @@ button:focus {
 }
 
 
-.site-navigation-1 {
+.site-navigation-item:nth-of-type(2) {
 	text-align: left;
+	margin-right: 96px;
 }
 
-.site-navigation-2 {
-	padding-right: 96px;
-	text-align: left;
-}
-
-.site-navigation-4, 
-.site-navigation-3 {
+.site-navigation-item:nth-of-type(3),
+.site-navigation-item:nth-of-type(4) {
 	text-align: right;
 }
 
+/*.site-navigation-2 {
+	
+	text-align: left;
+}*/
+
+/*.site-navigation-4, 
+.site-navigation-3 {
+	text-align: right;
+}
+*/
 
 .main-navigation-logo {
 	display: block;
@@ -432,7 +438,7 @@ button:focus {
 	list-style: none;
 	position: absolute;
 	left: 50%;
-	transform: 50%;
+	transform: translateX(-50%);
 }
 
 

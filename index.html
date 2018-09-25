@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-
   <div class="container">
     <header class="main-header">
       <nav class="main-navigation">
@@ -16,10 +15,10 @@
           <img src="img/logo.png" width="140" height="71" alt="Логотип City of Sedona">
         </a>        
         <ul class="site-navigation">
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="gallery.html">Фото и видео</a></li>
-          <li><a href="state-map.html">Карта Штата</a></li>
-          <li><a href="catalog.html">Гостиницы</a></li>
+          <li class="site-navigation-1"><a href="info.html">Информация</a></li>
+          <li class="site-navigation-2"><a href="gallery.html">Фото и видео</a></li>
+          <li class="site-navigation-3"><a href="state-map.html">Карта Штата</a></li>
+          <li class="site-navigation-4"><a href="catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -35,56 +34,65 @@
         <ul class="reasons-list">
          <li class="reason-item-blue">
           <div class="reason-item-blue-text">
-            <h3>Настоящий городок</h3>
+            <h3>Настоящий<br> городок</h3>
             <span>- №1 -</span>
-            <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+            <p>Седона - не аттракцион для туристов,<br> там течет своя жизнь</p>
           </div>
           <div class="reason-item-blue-img">
             <img src="img/layer-10.jpg" width="800" height="260" alt="Настоящий городок">
           </div>
         </li>
         <li class="reason-item-white">
+          <div class="reason-item-white-img">
+            <img src="img/icon-1.svg" alt="Жилье">
+          </div>
           <h3>Жилье</h3>
-          <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          <p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
         </li>
         <li class="reason-item-white">
+           <div class="reason-item-white-img" alt="Еда">
+            <img src="img/icon-3.svg">
+          </div>
           <h3>Еда</h3>
-          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
         </li>
         <li class="reason-item-white">
+           <div class="reason-item-white-img" alt="Сувениры">
+            <img src="img/icon-2.svg">
+          </div>
           <h3>Сувениры</h3>
-          <p>Не только китайского, но и местного производства!</p>
+          <p>Не только китайского, но и местного<br> производства!</p>
         </li>
         <li class="reason-item-blue second">
           <div class="reason-item-blue-text">
-            <h3>Там есть мост дьявола</h3>
+            <h3>Там есть<br> мост дьявола</h3>
             <span>- №2 - </span>
-            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <p>Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
           </div>
           <div class="reason-item-blue-img">
            <img src="img/layer-5.jpg" width="800" height="260" alt="Мост дьявола">
          </div>
        </li>
        <li class="reason-item-grey">
-        <h3>Небольшая площадь</h3>
+        <h3>Небольшая<br> площадь</h3>
         <span>- №3 -</span>
-        <p>Все достопримечательности находятся очень близко</p>
+        <p>Все достопримечательности<br> находятся очень близко</p>
       </li>
       <li class="reason-item-grey">
-        <h3>Красивая дорога</h3>
+        <h3>Красивая<br> дорога</h3>
         <span>- №4 - </span>
-        <p>Ехать в Седону из Лас-Вегаса совсем не скучно</p>
+        <p>Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
       </li>
       <li class="reason-item-grey">
-        <h3>Мало туристов</h3>
+        <h3>Мало<br> туристов</h3>
         <span>- №5 - </span>
-        <p>Большинство едет в Гранд Каньон и толпится там</p>
+        <p>Большинство едет в Гранд Каньон<br> и толпится там</p>
       </li>   
     </ul>    
   </section>
   <section class="interest">
-    <h2 class="interest-h1">Заинтересовались?</h2>
-    <p class="interest-text">Укажите предполагаемые даты поездки,  и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+    <h2>Заинтересовались?</h2>
+    <p class="interest-text">Укажите предполагаемые даты поездки,<br>  и мы покажем вам лучшие предложения гостиниц в Седоне</p>
     <!-- <img src="img/map.jpg" width="1200" height="474" alt="Карта"> -->
   </section>
   <section class="form">
@@ -102,17 +110,19 @@
         <input class="date-depature" id="date-depature" type="text"
         name="date-depature">
       </p>
-      <p class="form-field">
-        <label for="amount-adults">Взрослые</label>
+      <div class="form-field-ammount">
+      <p class="form-field amount-adults">
+        <label for="amount-adults">Взрослые:</label>
         <input class="amount-adults" id="amount-adults" type="number" min="0" value="2"
         name="amount-adults">
       </p class="form-field">
-      <p>
-        <label for="amount-children">Дети</label>
+      <p class="form-field amount-children">
+        <label for="amount-adults">Дети:</label>
         <input class="amount-children" id="amount-children" type="number" min="0"
         name="amount-children">
       </p>      
-      <button type="submit">Найти</button>
+    </div>
+      <button class="button" type="submit">Найти</button>
     </form>  
   </div> 
 </section>
@@ -121,9 +131,9 @@
   <p class="footer-text">#VISITSEDONA</p>
   <div class="footer-social">
     <ul>
-      <li><a class="social-button" href="#">Twitter</a></li>
-      <li><a class="social-button" href="#">Facebook</a></li>
-      <li><a class="social-button" href="#">Youtube</a></li>
+      <li><a class="social-button" href="#"><span class="visually-hidden">Twitter</span></a></li>
+      <li><a class="social-button" href="#"><span class="visually-hidden">Facebook</span></a></li>
+      <li><a class="social-button" href="#"><span class="visually-hidden">Youtube</span></a></li>
     </ul>
   </div>
   <p class="footer-copyright">

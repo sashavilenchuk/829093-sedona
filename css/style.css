@@ -1,18 +1,18 @@
 body {
-margin: 0;
-padding: 0;
+	margin: 0;
+	padding: 0;
 
-font-family: "PT Sans", Arial, sans-serif;
-font-size: 14px;
-line-height: 26px;
-color: #000000;
-text-transform: uppercase;
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 26px;
+	color: #000000;
+	text-transform: uppercase;
 
- background-color: #f2f2f2;
+	background-color: #f2f2f2;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .main-navigation {
@@ -28,7 +28,7 @@ a {
 }
 
 .site-navigation a {
-  color: #000000;
+	color: #000000;
 }
 
 .site-navigation a:hover {
@@ -40,9 +40,9 @@ a {
 }
 
 .reasons-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .container h1 {
@@ -55,20 +55,24 @@ a {
 
 .visually-hidden {
 	position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden
 }
 
 .reasons-text {
 	text-align: center;
+}
+
+.center-text {
+	
 }
 
 
@@ -119,7 +123,7 @@ a {
 .interest {
 	background-color: #ffffff;
 }
-.interest-h1 {
+.interest h2 {
 	font-size: 30px;
 	text-align: center;
 	line-height: 36px;
@@ -181,8 +185,9 @@ a {
 	background-color: #ffffff;
 	border-color: #ebebeb;
 	border: 2px #ebebeb;
-
 }
+
+
 /*не получилось поменять цвет рамки при focus */
 
 button {
@@ -216,21 +221,21 @@ button:focus {
 }
 
 .footer-social {
-  text-align: center;
+	text-align: center;
 }
 
 .footer-social ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .social-button {
-  color: #81b3d2;
+	color: #81b3d2;
 }
 
 .footer-copyright {
-  text-align: center;
+	text-align: center;
 }
 
 .footer-copyright .button:hover {
@@ -267,7 +272,7 @@ button:focus {
 	font-size: 12px;
 	line-height: 18px;
 	color: #f0f0f0;
-	}
+}
 
 .sorting-list:hover {
 	color:#81b3d2;
@@ -374,8 +379,7 @@ button:focus {
 	margin-left: auto;
 	margin-right: auto;
 	outline: solid 3px brown;
- }
-	
+}
 
 .main-navigation {
 	margin: 0px;
@@ -383,12 +387,17 @@ button:focus {
 	display: flex;
 	height: 73px;
 	outline: solid 3px green;
+	
 }
 
 .site-navigation {
 	display: flex;
 	padding: 0px;
 	margin: 0px;
+	outline: solid 10px pink;
+	width: 1054px;
+	margin-left: 73px;
+	margin-right: 73px; 
 }
 
 .site-navigation li {
@@ -401,17 +410,32 @@ button:focus {
 }
 
 
+.site-navigation-1 {
+	text-align: left;
+}
+
+.site-navigation-2 {
+	padding-right: 96px;
+	text-align: left;
+}
+
+.site-navigation-4, 
+.site-navigation-3 {
+	text-align: right;
+}
+
+
 .main-navigation-logo {
 	display: block;
 	width: 144px;
- 	height: 73px;
- 	list-style: none;
- 	position: absolute;
- 	left: 50%;
- 	transform: 50%;
- }
- 	
-  
+	height: 73px;
+	list-style: none;
+	position: absolute;
+	left: 50%;
+	transform: 50%;
+}
+
+
 .background-image {
 	width: 100%;
 }
@@ -419,13 +443,26 @@ button:focus {
 
 .center-text {
 	display: block;
-	height: 220px;
-	outline: solid 3px red;
+	background-color: #ffffff;
+	height: 210px;
+	margin: 0px;
 	padding: 0px;
-	/*margin-top: 60px;*/
-	margin-bottom: 40px;
 }
 
+.center-text h1 {
+	display: block;
+
+	padding-top: 65px;
+	padding-bottom: 40px;
+	margin: 0px;
+}
+
+.reasons-text {
+	display: block;
+	margin: 0px;
+	margin-bottom: 50px;
+	/*почему марджн заезжает на следующий блок?*/
+}
 
 
 .reasons-list {
@@ -439,7 +476,6 @@ button:focus {
 .reason-item-blue {
 	display: flex;
 	height: 260px;
-	outline: solid 3px green;
 	list-style: none;
 	margin: 0px;
 }
@@ -454,9 +490,26 @@ button:focus {
 	display: flex;
 	width: 400px;
 	height: 260px;
-	outline: solid 3px yellow;
 	flex-direction: column;
 	order: -1;
+}
+
+.reason-item-grey h3,
+.reason-item-blue-text h3 {
+	display: block;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.reason-item-grey span,
+.reason-item-blue-text span {
+	display: block;
+}
+
+.reason-item-grey p,
+.reason-item-blue-text p {
+	display: block;
+	margin-top: 30px;
 }
 
 
@@ -464,10 +517,8 @@ button:focus {
 	display: flex;
 	width: 800px
 	height: 260px;
-	outline: solid 3px red; 
 	flex-wrap: nowrap;
 }
-
 
 .reason-item-white {
 	margin: 0px;
@@ -478,6 +529,27 @@ button:focus {
 	flex-direction: column;
 }
 
+.reason-item-white-img {
+	display: block;
+	width: 80px;
+	height: 70px;
+	/*нужно ли задавать размеры свг?*/
+	margin-left: auto;
+  	margin-right: auto;
+  	margin-top: 62px;
+}
+
+.reason-item-white h3 {
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.reason-item-white p {
+	display: block;
+	margin: auto;
+	margin-bottom: 87px;
+}
 
 .reason-item-grey {
 	margin: 0px;
@@ -489,14 +561,28 @@ button:focus {
 	outline: solid 3px blue; 
 }
 
-
 .interest {
 	display: block;
 	width: 1200px;
 	height: 290px;
 	outline: solid 3px red;
 	padding: 0px;
+	margin: 0px;
 }
+
+.interest h2 {
+	display: block;
+	margin: auto;
+	padding-top: 60px;
+	padding-bottom: 37px;
+}
+
+/*.interest-text {
+	нужно ли этот кусочек оборачивать в отдельный блок и задавать для него падинги?
+}*/
+
+
+/*как правильно подвинуть форму? она лежит поверх карты и белого фона? должна быть размещена относительно текста interest? */
 
 .form {
 	display: flex;
@@ -505,18 +591,107 @@ button:focus {
 	flex-direction: column;
 	margin-left: 314px;
 	outline: solid 3px green;
+	flex-wrap: wrap;
 }
 
 .button-search {
 	display: block;
 	height: 87px;
+	width: 100%;
 }
+
 
 .form-fields {
 	display: flex;
 	height: 393px;
 	flex-direction: column;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+	outline: solid 2px pink;
+	/*margin-top: 55px;*/
+	/*когда пытаюсь оттолкнуть весь блок от верхнего элемента - все едет */
 }
+
+.form-field {
+	width: 460px;
+	outline: solid 3px red;
+	display: flex;
+	justify-content: space-between;
+	margin: 0px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+}
+
+input {
+	box-sizing: border-box;
+	width: 346px;
+	padding-top: 7px;
+  	padding-left: 20px;
+  	padding-bottom: 7px;
+  	outline: solid 3px yellow;	
+
+}
+
+label {
+	margin-right: 21px;
+	background-color: #ffffff;
+	margin-top: 7px;
+}
+
+
+.form-field-ammount {
+	display: flex;
+	outline: solid 3px green;
+	flex-wrap: wrap;
+	background-color: #ffffff;
+}
+
+/*в label дети окрашивается часть пространства в серый цвет*/
+
+
+.form-field.amount-children,
+.form-field.amount-adults {
+	width: 230px;
+	outline: solid 1px red;
+	display: flex;
+	justify-content: space-between;
+	margin: 0px;
+}
+
+.amount-children input,
+.amount-adults input {
+	display: block;
+	width: 117px;
+	outline: solid 2px grey;
+}
+
+.amount-adults label {
+	padding-right: 42px;
+}
+
+.amount-children label {
+	padding-right: 25px;
+	margin: 0px;
+	margin-top: 7px;
+}
+
+.form .button {
+	display: block;
+	width: 100%;
+	margin-top: 55px;
+	height: 58px;
+	/*сломался текст*/
+}
+
+
+
+
+
+
+
+
 
 .main-footer {
 	padding: 0px;
@@ -546,6 +721,8 @@ button:focus {
 	outline: solid 3px blue;
 }
 
+
+/*иконки = белые вставлются на изменяющийся фон. для третьего состояния меняетсчя прорзачность иконки. вставить как фон для блока*/
 
 /*сетка каталога*/
 
@@ -581,7 +758,7 @@ button:focus {
 	padding: 0px;
 	margin-left: 73px;
 	justify-content: space-between;
-	}
+}
 
 .hotels-list-image {
 	display: flex;
@@ -597,7 +774,7 @@ button:focus {
 	outline: solid 3px pink;
 	flex-grow: 1;
 	height: 152px;
-	
+
 }
 
 .hotels-list-item-rating {

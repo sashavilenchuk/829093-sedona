@@ -21,10 +21,35 @@ a {
 	line-height: 26px;
 	color: #000000;
 	background-color: #ffffff;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	/*outline: solid 3px green;*/
 }
+
+
+.main-navigation-logo {
+	display: block;
+	width: 144px;
+	height: 73px;
+	/*нужно ли у него убирать высоту?*/
+	list-style: none;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 
 .site-navigation {
 	list-style: none;
+	display: flex;
+	padding: 0px;
+	margin: 0px;
+	/*outline: solid 10px pink;*/
+	width: 1054px;
+	margin-left: 73px;
+	margin-right: 73px; 
+	flex-wrap: wrap;
 }
 
 .site-navigation a {
@@ -39,11 +64,59 @@ a {
 	color: #e4e4e4;
 }
 
+
+.site-navigation li {
+	display: flex;
+	margin: 0px;
+	list-style: none;
+	/*outline: solid 3px red;*/
+	width: 240px;
+	align-items: center;
+}
+
+.site-navigation-item {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.site-navigation-item:nth-of-type(2) {
+	text-align: left;
+	margin-right: 94px;
+}
+
+.site-navigation li:nth-child(+n+3) {
+	justify-content: flex-end;
+}
+
+
 .reasons-list {
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
 }
+
+
+.container {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	/*outline: solid 3px brown;*/
+}
+
+.background-image {
+	width: 100%;
+	height: 510px;
+	background-image:url("../img/polygon-crop.jpg");
+	background-position: top center;
+	/*outline: 3px solid red;*/
+	background-color: #eeeeee;
+}
+
 
 .container h1 {
 	color: #000000;
@@ -69,10 +142,28 @@ a {
 
 .reasons-text {
 	text-align: center;
+	display: block;
+	margin: 0px;
+	padding-bottom: 50px;
 }
 
 .center-text {
-	
+	display: block;
+	background-color: #ffffff;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	/*outline: 3px solid green;*/
+
+}
+
+.center-text h1 {
+	display: block;
+	padding-top: 58px;
+	padding-bottom: 27px;
+	margin: 0px;
+	padding-left: 376px;
+	padding-right: 376px;
 }
 
 
@@ -82,6 +173,14 @@ a {
 	font-size: 14px;
 	line-height: 21px;	
 	text-align: center;
+	display: flex;
+	list-style: none;
+	margin: 0px;
+}
+
+.reason-item-blue.second {
+	display: flex;
+	flex-direction: row-reverse;
 }
 
 
@@ -91,12 +190,58 @@ a {
 	font-weight: bold;
 }
 
+
+.reason-item-blue-text {
+	display: flex;
+	max-width: 400px;
+	flex-direction: column;
+	order: -1;
+}
+
+.reason-item-blue-img {
+	display: flex;
+	width: 800px
+	flex-wrap: nowrap;
+}
+
+
+.reason-item-grey h3,
+.reason-item-blue-text h3 {
+	display: block;
+	margin-top: 47px;
+	margin-bottom: 30px;
+	padding-left: 125px;
+	padding-right: 125px;
+}
+
+.reason-item-grey span,
+.reason-item-blue-text span {
+	display: block;
+}
+
+.reason-item-blue-text h3:nth-child(2) {
+	padding-right: 137px;
+	padding-left: 137px;
+}
+
+/*не получается применить другие паддинги к конкретному типу reason-item-blue-text h3, ко второму в данном случае*/
+
+
+
+
+
+
 .reason-item-white {
 	background-color: #ffffff;
 	color: #000000;
 	font-size: 14px;
 	line-height: 21px;	
 	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	width: 400px; 
+	flex-direction: column;
 }
 
 
@@ -104,6 +249,9 @@ a {
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: bold;
+	display: block;
+	margin-top: 157px;
+	margin-bottom: 26px;
 }
 
 .reason-item-grey {
@@ -120,20 +268,114 @@ a {
 	font-weight: bold;
 }
 
+
+.reason-item-grey p,
+.reason-item-blue-text p {
+	display: block;
+	margin-top: 30px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+
+.reason-item-white::after {
+	content:"";
+	position:absolute;
+	display:block;
+	width:75px;
+	height:76px;
+	margin:0 auto;
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-repeat: no-repeat;
+	/*left: 207px;
+	bottom:-224px;
+
+	чтобы все расстаить - нужно применить очень странное позиционирование, как будто расче идет не от верхнего левого угла элемента*/
+}
+
+.reason-item-white.house::after {
+	background-image:url("../img/icon-1.svg");
+	left: 207px;
+	bottom: -224px;	
+	
+}
+
+.reason-item-white.food::after {
+	background-image:url("../img/icon-3.svg");
+
+}
+
+.reason-item-white.souvenirs::after {
+	background-image:url("../img/icon-2.svg");
+}
+
+
+.reason-item-white h3 {
+	
+}
+
+.reason-item-white p {
+	display: block;
+	margin: 0px;
+	/*margin-bottom: 87px;*/
+	padding-left: 71px;
+	padding-right: 71px;
+}
+
+.reason-item-white p:nth-child(2) {
+	padding-left: 55px;
+	padding-right: 55px;
+}
+
+.reason-item-white p:nth-of-type(3) {
+	padding-left: 65px;
+	padding-right: 65px;
+}
+
+/*не получилось применить к конкретно этому абзацу правильные падинги, чтобы текст перенесся там где надо*/
+
+.reason-item-grey {
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	width: 400px; 
+	flex-direction: column;
+	outline: solid 3px blue; 
+}
+
+
+
 .interest {
 	background-color: #ffffff;
+	display: block;
+	width: 1200px;
+	outline: solid 3px red;
+	padding: 0px;
+	margin: 0px;
+	/*padding-bottom: 55px;*/
 }
+
 .interest h2 {
 	font-size: 30px;
 	text-align: center;
 	line-height: 36px;
 	font-weight: bold;
+	display: block;
+	margin: auto;
+	padding-top: 76px;
+	padding-bottom: 23px;
 }
 
 .interest-text {
 	font-size: 14px;
 	line-height: 24px;
 	text-align: center;
+	padding-right: 382px;
+	padding-left: 382px;
+	margin: 0px;
+	padding-bottom: 50px;
+
 }
 
 .button-search {
@@ -142,6 +384,10 @@ a {
 	color: #ffffff;
 	text-transform: uppercase;
 	background-color: #766357;
+	display: block;
+	height: 87px;
+	width: 100%;
+	text-align: center;
 }
 
 .button-search:hover {
@@ -158,6 +404,33 @@ a {
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
+	display: flex;
+	width: 570px;
+	height: 480px;
+	flex-direction: column;
+	margin-left: 314px;
+	outline: solid 3px green;
+	flex-wrap: wrap;
+}
+
+.form-fields {
+	display: flex;
+	height: 393px;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+	outline: solid 2px pink;
+}
+
+.form-field {
+	width: 460px;
+	outline: solid 3px red;
+	display: flex;
+	justify-content: space-between;
+	margin: 0px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .date-arrival,
@@ -187,10 +460,104 @@ a {
 	border: 2px #ebebeb;
 }
 
+.calendar-button {
+  	position: absolute;
+  	top: 8px;
+  	right: 9px;
+  	width: 21px;
+  	height: 22px;
+  	border: 1px solid transparent;
+  	background: transparent;
+}
+
+.calendar-button svg {
+	position: absolute;
+  	top: 2120px;
+  	right: 415px;
+  	display: block;
+}
+
+/*размещение свг календаря отсчитывается от верхнего правого угла тоже*/
+
+.calendar-button path {
+  fill: #cacaca;
+}
+
+.calendar-button:hover path {
+  fill: #000000;
+}
+
+.calendar-button:active path {
+  fill: #81b3d2;
+}
+
+.calendar-button:active {
+  outline: none;
+}
+
+input {
+	box-sizing: border-box;
+	width: 346px;
+	padding-top: 7px;
+  	padding-left: 20px;
+  	padding-bottom: 7px;
+  	outline: solid 3px yellow;	
+
+}
+
+label {
+	margin-right: 21px;
+	background-color: #ffffff;
+	margin-top: 7px;
+}
+
+
+.form-field-ammount {
+	display: flex;
+	outline: solid 3px green;
+	flex-wrap: wrap;
+	background-color: #ffffff;
+}
+
+/*в label дети окрашивается часть пространства в серый цвет
+поменять марджини на паддиинги, добавить кнопки, 
+для общего блока формы паддинги*/
+
+
+
+.form-field.amount-children,
+.form-field.amount-adults {
+	width: 230px;
+	outline: solid 1px red;
+	display: flex;
+	justify-content: space-between;
+	margin: 0px;
+}
+
+.amount-children input,
+.amount-adults input {
+	display: block;
+	width: 117px;
+	outline: solid 2px grey;
+}
+
+.amount-adults label {
+	padding-right: 42px;
+}
+
+.amount-children label {
+	padding-right: 25px;
+	margin: 0px;
+	margin-top: 7px;
+}
+
+
+
+
 
 /*не получилось поменять цвет рамки при focus */
 
-button {
+.button-submit {
 	background-color: #81b3d2;
 	color: #ffffff;
 	font-family: "PT Sans", Arial, sans-serif;
@@ -198,19 +565,32 @@ button {
 	line-height: 26px;
 	font-weight: bold;
 	border: 0;
+	display: block;
+	width: 100%;
+	margin-top: 55px;
+	height: 58px;
+	text-transform: uppercase;
 }
 
-button:hover {
+.button-submit:hover {
 	background-color: #669ec0;
 }
 
-button:focus {
+.button-submit:focus {
 	background-color: #5496bd;
 	color: #94b9d2;
 }
 
+/*убрать глобальный тег, сделать для конкретного, заменить на селектор+тег*/
+
+
 .main-footer {
 	background-color: rgba(255, 255, 255, 0.9);
+	padding: 0px;
+	display: flex;
+	width: 100%;
+	outline: solid 3px green;
+	height: 120px;
 }
 
 .footer-text {
@@ -218,10 +598,17 @@ button:focus {
 	line-height: 26px;
 	font-weight: bold;
 	text-align: center;
+	margin-top: 50px;
+	width: 400px;
+	outline: solid 3px yellow;
 }
 
 .footer-social {
 	text-align: center;
+	list-style: none;
+	width: 400px;
+	margin-top: 50px;
+	outline: solid 3px pink;
 }
 
 .footer-social ul {
@@ -236,6 +623,9 @@ button:focus {
 
 .footer-copyright {
 	text-align: center;
+	width: 400px;
+	margin-top: 50px;
+	outline: solid 3px blue;
 }
 
 .footer-copyright .button:hover {
@@ -245,16 +635,27 @@ button:focus {
 	color: #bdbbbc;
 }
 
+/*иконки = белые вставлются на изменяющийся фон. для третьего состояния меняетсчя прорзачность иконки. вставить как фон для блока*/
+/*заменить br кроме -  https://up.htmlacademy.ru/htmlcss/22/examples_br# на фиксировнную ширину блока width с неразрывн пробелом или на паддинги */
+
 
 /*начало catalog*/
 
 
 .sorting-list {
 	list-style: none;
+	font-size: 12px;
+	line-height: 18px;
+	color: #f0f0f0;
+	display: flex;
+	padding: 0px;
+	margin: 0px;
 }
 
 .sorting-top {
 	background-color: #ffffff;
+	height: 100px;
+	outline: solid 3px red;
 }
 
 .amount-result {
@@ -269,9 +670,7 @@ button:focus {
 }
 
 .sorting-list {
-	font-size: 12px;
-	line-height: 18px;
-	color: #f0f0f0;
+	
 }
 
 .sorting-list:hover {
@@ -289,6 +688,10 @@ button:focus {
 
 .sorting-list li {
 	border-bottom: 2px dotted #81b3d2;	
+	display: flex;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
 }
 
 /*не увеерена, как правильно сделать, чтобы подчеркивание было только под словом, не на все свободное пространство*/
@@ -299,12 +702,16 @@ button:focus {
 
 
 .hotels-list {
-	list-style: none;
+	
 }
 
 .hotels-list {
 	font-size: 14px
 	line-height: 21px;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
 }
 
 .hotels-list h3 {
@@ -321,8 +728,23 @@ button:focus {
 	color: #cacaca;
 }
 
+.hotels-list-item {
+	display: flex;
+	width: 1056px;
+	height: 152px;
+	outline: solid 3px green;
+	padding: 0px;
+	margin-left: 73px;
+	justify-content: space-between;
+}
+
 .hotels-list-item-parametr {
 	list-style: none;
+	list-style: none;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+}
 }
 
 .hotels-list-item-parametr b{
@@ -331,7 +753,32 @@ button:focus {
 
 .hotels-list-item-rating {
 	background-color: #f2f2f2;
+	display: flex;
+	outline: solid 3px brown;
+	width: 112px;
+	height: 152px;
+	margin: 0px;
+	padding: 0px;
 }
+
+
+.hotels-list-image {
+	display: flex;
+	outline: solid 3px yellow;
+	width: 140px;
+	height: 152px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.hotels-list-item-data {
+	display: flex;
+	outline: solid 3px pink;
+	flex-grow: 1;
+	height: 152px;
+
+}
+
 
 .button-more-info {
 	background-color: #81b3d2;
@@ -369,437 +816,9 @@ button:focus {
 
 /*конец каталог */
 
-/*фотография+маска - как фон, текст как контентное изображение. перевырезать с белой маской.
-*/
 
 
 /*сеточные стили*/
-.container {
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-	outline: solid 3px brown;
-}
-
-.main-navigation {
-	margin: 0px;
-	padding: 0px;
-	display: flex;
-	height: 73px;
-	outline: solid 3px green;
-	
-}
-
-.site-navigation {
-	display: flex;
-	padding: 0px;
-	margin: 0px;
-	outline: solid 10px pink;
-	width: 1054px;
-	margin-left: 73px;
-	margin-right: 73px; 
-}
-
-.site-navigation li {
-	display: flex;
-	margin: 0px;
-	list-style: none;
-	outline: solid 3px red;
-	width: 240px;
-	align-items: center;
-}
-
-
-.site-navigation-item:nth-of-type(2) {
-	text-align: left;
-	margin-right: 96px;
-}
-
-.site-navigation-item:nth-of-type(3),
-.site-navigation-item:nth-of-type(4) {
-	text-align: right;
-}
-
-/*.site-navigation-2 {
-	
-	text-align: left;
-}*/
-
-/*.site-navigation-4, 
-.site-navigation-3 {
-	text-align: right;
-}
-*/
-
-.main-navigation-logo {
-	display: block;
-	width: 144px;
-	height: 73px;
-	list-style: none;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-
-.background-image {
-	width: 100%;
-}
-
-
-.center-text {
-	display: block;
-	background-color: #ffffff;
-	height: 210px;
-	margin: 0px;
-	padding: 0px;
-}
-
-.center-text h1 {
-	display: block;
-
-	padding-top: 65px;
-	padding-bottom: 40px;
-	margin: 0px;
-}
-
-.reasons-text {
-	display: block;
-	margin: 0px;
-	margin-bottom: 50px;
-	/*почему марджн заезжает на следующий блок?*/
-}
-
-
-.reasons-list {
-	padding: 0px;
-	margin: 0px;
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-}
-
-.reason-item-blue {
-	display: flex;
-	height: 260px;
-	list-style: none;
-	margin: 0px;
-}
-
-.reason-item-blue.second {
-	display: flex;
-	flex-direction: row-reverse;
-}
-
-
-.reason-item-blue-text {
-	display: flex;
-	width: 400px;
-	height: 260px;
-	flex-direction: column;
-	order: -1;
-}
-
-.reason-item-grey h3,
-.reason-item-blue-text h3 {
-	display: block;
-	margin-top: 40px;
-	margin-bottom: 30px;
-}
-
-.reason-item-grey span,
-.reason-item-blue-text span {
-	display: block;
-}
-
-.reason-item-grey p,
-.reason-item-blue-text p {
-	display: block;
-	margin-top: 30px;
-}
-
-
-.reason-item-blue-img {
-	display: flex;
-	width: 800px
-	height: 260px;
-	flex-wrap: nowrap;
-}
-
-.reason-item-white {
-	margin: 0px;
-	padding: 0px;
-	display: flex;
-	width: 400px; 
-	height: 330px;
-	flex-direction: column;
-}
-
-.reason-item-white-img {
-	display: block;
-	width: 80px;
-	height: 70px;
-	/*нужно ли задавать размеры свг?*/
-	margin-left: auto;
-  	margin-right: auto;
-  	margin-top: 62px;
-}
-
-.reason-item-white h3 {
-	display: block;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-.reason-item-white p {
-	display: block;
-	margin: auto;
-	margin-bottom: 87px;
-}
-
-.reason-item-grey {
-	margin: 0px;
-	padding: 0px;
-	display: flex;
-	width: 400px; 
-	height: 255px;
-	flex-direction: column;
-	outline: solid 3px blue; 
-}
-
-.interest {
-	display: block;
-	width: 1200px;
-	height: 290px;
-	outline: solid 3px red;
-	padding: 0px;
-	margin: 0px;
-}
-
-.interest h2 {
-	display: block;
-	margin: auto;
-	padding-top: 60px;
-	padding-bottom: 37px;
-}
-
-/*.interest-text {
-	нужно ли этот кусочек оборачивать в отдельный блок и задавать для него падинги?
-}*/
-
-
-/*как правильно подвинуть форму? она лежит поверх карты и белого фона? должна быть размещена относительно текста interest? */
-
-.form {
-	display: flex;
-	width: 570px;
-	height: 480px;
-	flex-direction: column;
-	margin-left: 314px;
-	outline: solid 3px green;
-	flex-wrap: wrap;
-}
-
-.button-search {
-	display: block;
-	height: 87px;
-	width: 100%;
-}
-
-
-.form-fields {
-	display: flex;
-	height: 393px;
-	flex-direction: column;
-	flex-wrap: wrap;
-	margin-left: auto;
-	margin-right: auto;
-	outline: solid 2px pink;
-	/*margin-top: 55px;*/
-	/*когда пытаюсь оттолкнуть весь блок от верхнего элемента - все едет */
-}
-
-.form-field {
-	width: 460px;
-	outline: solid 3px red;
-	display: flex;
-	justify-content: space-between;
-	margin: 0px;
-	margin-top: 30px;
-	margin-bottom: 30px;
-
-}
-
-input {
-	box-sizing: border-box;
-	width: 346px;
-	padding-top: 7px;
-  	padding-left: 20px;
-  	padding-bottom: 7px;
-  	outline: solid 3px yellow;	
-
-}
-
-label {
-	margin-right: 21px;
-	background-color: #ffffff;
-	margin-top: 7px;
-}
-
-
-.form-field-ammount {
-	display: flex;
-	outline: solid 3px green;
-	flex-wrap: wrap;
-	background-color: #ffffff;
-}
-
-/*в label дети окрашивается часть пространства в серый цвет*/
-
-
-.form-field.amount-children,
-.form-field.amount-adults {
-	width: 230px;
-	outline: solid 1px red;
-	display: flex;
-	justify-content: space-between;
-	margin: 0px;
-}
-
-.amount-children input,
-.amount-adults input {
-	display: block;
-	width: 117px;
-	outline: solid 2px grey;
-}
-
-.amount-adults label {
-	padding-right: 42px;
-}
-
-.amount-children label {
-	padding-right: 25px;
-	margin: 0px;
-	margin-top: 7px;
-}
-
-.form .button {
-	display: block;
-	width: 100%;
-	margin-top: 55px;
-	height: 58px;
-	/*сломался текст*/
-}
-
-
-
-
-
-
-
-
-
-.main-footer {
-	padding: 0px;
-	display: flex;
-	width: 100%;
-	outline: solid 3px green;
-	height: 120px;
-} 
-
-.footer-text {
-
-	margin-top: 50px;
-	width: 400px;
-	outline: solid 3px yellow;
-}
-
-.footer-social {
-	list-style: none;
-	width: 400px;
-	margin-top: 50px;
-	outline: solid 3px pink;
-}
-
-.footer-copyright {
-	width: 400px;
-	margin-top: 50px;
-	outline: solid 3px blue;
-}
-
-
-/*иконки = белые вставлются на изменяющийся фон. для третьего состояния меняетсчя прорзачность иконки. вставить как фон для блока*/
-
-/*сетка каталога*/
-
-
-.sorting-top {
-	height: 100px;
-	outline: solid 3px red;
-}
-
-.sorting-list {
-	display: flex;
-	padding: 0px;
-	margin: 0px;
-}
-
-.sorting-list li {
-	display: flex;
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-}
-
-.hotels-list {
-	padding: 0px;
-	margin: 0px;
-	list-style: none;
-}
-.hotels-list-item {
-	display: flex;
-	width: 1056px;
-	height: 152px;
-	outline: solid 3px green;
-	padding: 0px;
-	margin-left: 73px;
-	justify-content: space-between;
-}
-
-.hotels-list-image {
-	display: flex;
-	outline: solid 3px yellow;
-	width: 140px;
-	height: 152px;
-	margin: 0px;
-	padding: 0px;
-}
-
-.hotels-list-item-data {
-	display: flex;
-	outline: solid 3px pink;
-	flex-grow: 1;
-	height: 152px;
-
-}
-
-.hotels-list-item-rating {
-	display: flex;
-	outline: solid 3px brown;
-	width: 112px;
-	height: 152px;
-	margin: 0px;
-	padding: 0px;
-}
-
-.hotels-list-item-parametr {
-	list-style: none;
-	padding: 0px;
-	display: flex;
-	flex-direction: row;
-}
-
-
 
 
 
